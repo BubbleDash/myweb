@@ -373,7 +373,7 @@ function loadSampleData() {
         {
             id: 3,
             name: 'cucu-红',
-            bio: '被说到点子上了，被动出发的E状态，红色代表了永远亢奋激动的情绪。',
+            bio: '被说到点子上了，被动触发的E状态，红色代表了永远亢奋激动的情绪。',
             image: 'https://via.placeholder.com/400x400/8BC34A/2E7D32?text=White+Night',
             details: {
                 '年龄': '？？？',
