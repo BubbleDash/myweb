@@ -248,8 +248,8 @@ function loadSampleData() {
         { id: 4, title: '废墟图书馆', source: 'ProjectMoon月亮计划', image: 'fxdd.jpg' },
         { id: 5, title: '脑叶公司', source: 'ProjectMoon月亮计划', image: 'yxt.jpg' },
         { id: 6, title: '边狱巴士', source: 'ProjectMoon月亮计划', image: 'bysl.jpg' },
-        { id: 7, title: 'RPG', source: 'RPG大杂烩', image: 'https://via.placeholder.com/400x300/8BC34A/2E7D32?text=Magical+Girl' },
-        { id: 8, title: '动画', source: '动画大杂烩', image: 'https://via.placeholder.com/400x300/8BC34A/2E7D32?text=Magical+Girl' },
+        // { id: 7, title: 'RPG', source: 'RPG大杂烩', image: 'https://via.placeholder.com/400x300/8BC34A/2E7D32?text=Magical+Girl' },
+        // { id: 8, title: '动画', source: '动画大杂烩', image: 'https://via.placeholder.com/400x300/8BC34A/2E7D32?text=Magical+Girl' },
     ];
     
     // 独立游戏示例数据
@@ -289,20 +289,20 @@ function loadSampleData() {
             updated: '2023-11-15',
             image: 'https://via.placeholder.com/100x100/E53935/FFFFFF?text=游戏2'
         },
-        {
-            id: 6,
-            title: '恐怖互动',
-            type: '互动解谜',
-            updated: '2023-11-08',
-            image: '' // 无图片，使用默认占位图
-        },
-        {
-            id: 76,
-            title: 'xxxx',
-            type: '视觉小说',
-            updated: '2023-11-05',
-            image: '' // 无图片，使用默认占位图
-        }
+        // {
+        //     id: 6,
+        //     title: '恐怖互动',
+        //     type: '互动解谜',
+        //     updated: '2023-11-08',
+        //     image: '' // 无图片，使用默认占位图
+        // },
+        // {
+        //     id: 76,
+        //     title: 'xxxx',
+        //     type: '视觉小说',
+        //     updated: '2023-11-05',
+        //     image: '' // 无图片，使用默认占位图
+        // }
     ];
     
     // only活动示例数据
@@ -349,37 +349,37 @@ function loadSampleData() {
         {
             id: 1,
             name: '绒绒',
-            bio: '异世界新人玩家，为了拯救青梅不惜以身入局，但似乎隐瞒着更核心的目的。温柔的科研天才，却于虚构世界反复再临的末日浩劫中不断寻回与失去，一步、一步地接近扑朔迷离的真相…',
+            bio: '欧美2D画风吉祥物，爱吃炸鸡烤肉，喜欢宅在房间看直播，刷番，打游戏。',
             image: 'https://via.placeholder.com/400x400/8BC34A/2E7D32?text=White+Night',
             details: {
                 '年龄': '18',
                 '性别': '女',
-                '能力': '代价预言系统',
-                '性格': '理智、坚韧'
+                '技能': '入定三天直到游戏通关',
+                '性格': '贪玩、上头、随性'
             }
         },
         {
             id: 2,
-            name: '吴晓',
-            bio: '异世界新人玩家，为了拯救青梅不惜以身入局，但似乎隐瞒着更核心的目的。温柔的科研天才，却于虚构世界反复再临的末日浩劫中不断寻回与失去，一步、一步地接近扑朔迷离的真相…',
+            name: 'cucu-绿',
+            bio: 'i状态，话不多，说话很慢，但喜欢和朋友聚在一起。',
             image: 'https://via.placeholder.com/400x400/8BC34A/2E7D32?text=White+Night',
             details: {
-                '年龄': '似乎20来岁',
+                '年龄': '？？？',
                 '性别': '女',
-                '能力': '代价预言系统',
-                '性格': '理智、坚韧'
+                '能力': '烹饪',
+                '性格': '温柔、友善'
             }
         },
         {
             id: 3,
-            name: '吴晓',
+            name: 'cucu-红',
             bio: '异世界新人玩家，为了拯救青梅不惜以身入局，但似乎隐瞒着更核心的目的。温柔的科研天才，却于虚构世界反复再临的末日浩劫中不断寻回与失去，一步、一步地接近扑朔迷离的真相…',
             image: 'https://via.placeholder.com/400x400/8BC34A/2E7D32?text=White+Night',
             details: {
-                '年龄': '似乎20来岁',
+                '年龄': '？？？',
                 '性别': '女',
-                '能力': '代价预言系统',
-                '性格': '理智、坚韧'
+                '能力': '吃饭（除了脑子什么都转的很快）',
+                '性格': '冲动、叛逆'
             }
         },
         // {
@@ -424,7 +424,7 @@ function loadSampleData() {
     const comicsData = [
         {
             id: 1,
-            title: 'xxxxx',
+            title: 'xxxxxxx',
             type: ['日常', '番外', '校园'],
             updated: '2025-12-05',
             image: 'https://via.placeholder.com/100x100/8BC34A/2E7D32?text=漫画1',
