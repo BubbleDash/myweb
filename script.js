@@ -361,7 +361,7 @@ function loadSampleData() {
         {
             id: 2,
             name: 'cucu-绿',
-            bio: 'i状态，话不多，说话很慢，但喜欢和朋友聚在一起。',
+            bio: 'I 本体状态，话不多，说话很慢，但喜欢和朋友聚在一起。',
             image: 'https://via.placeholder.com/400x400/8BC34A/2E7D32?text=White+Night',
             details: {
                 '年龄': '？？？',
@@ -373,7 +373,7 @@ function loadSampleData() {
         {
             id: 3,
             name: 'cucu-红',
-            bio: '异世界新人玩家，为了拯救青梅不惜以身入局，但似乎隐瞒着更核心的目的。温柔的科研天才，却于虚构世界反复再临的末日浩劫中不断寻回与失去，一步、一步地接近扑朔迷离的真相…',
+            bio: '被说到点子上了，被动出发的E状态，红色代表了永远亢奋激动的情绪。',
             image: 'https://via.placeholder.com/400x400/8BC34A/2E7D32?text=White+Night',
             details: {
                 '年龄': '？？？',
@@ -434,6 +434,7 @@ function loadSampleData() {
                 'https://via.placeholder.com/800x1200/8BC34A/2E7D32?text=Page+3'
             ]
         },
+
         {
             id: 2,
             title: 'xxxxxx',
