@@ -97,7 +97,26 @@ body {
     margin-right: 10px;
 }
 
+/* 翻译切换按钮 */
+.translate-toggle {
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    transition: var(--transition);
+    margin-right: 10px;
+}
+
 .theme-toggle:hover {
+    background-color: var(--shadow-color);
+    transform: rotate(15deg);
+}
+
+/* 翻译按钮悬停效果 */
+.translate-toggle:hover {
     background-color: var(--shadow-color);
     transform: rotate(15deg);
 }

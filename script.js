@@ -3,6 +3,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // 初始化主题
     initTheme();
     
+    // 初始化翻译功能
+    initTranslation();
+    
     // 初始化导航菜单
     initNavigation();
     
@@ -47,6 +50,222 @@ function initTheme() {
         localStorage.setItem('theme', newTheme);
     });
 }
+
+// 初始化翻译功能
+function initTranslation() {
+    const translateToggle = document.getElementById('translateToggle');
+    const body = document.body;
+    
+    // 从localStorage获取保存的语言
+    const savedLanguage = localStorage.getItem('language');
+    
+    // 如果有保存的语言，应用它
+    if (savedLanguage) {
+        body.setAttribute('data-language', savedLanguage);
+        translatePage(savedLanguage);
+    } else {
+        // 默认使用中文
+        body.setAttribute('data-language', 'zh');
+    }
+    
+    // 添加翻译切换事件监听
+    translateToggle.addEventListener('click', function() {
+        const currentLanguage = body.getAttribute('data-language');
+        const newLanguage = currentLanguage === 'zh' ? 'en' : 'zh';
+        
+        // 应用新语言
+        body.setAttribute('data-language', newLanguage);
+        
+        // 翻译页面
+        translatePage(newLanguage);
+        
+        // 保存语言到localStorage
+        localStorage.setItem('language', newLanguage);
+    });
+}
+
+// 翻译页面
+function translatePage(language) {
+    // 获取所有带有data-translate属性的元素
+    const translateElements = document.querySelectorAll('[data-translate]');
+    
+    translateElements.forEach(element => {
+        const key = element.getAttribute('data-translate');
+        const translation = translations[key][language];
+        
+        if (translation) {
+            element.textContent = translation;
+        }
+    });
+}
+
+// 翻译字典
+const translations = {
+    // 导航栏
+    'nav-about': {
+        'zh': '关于我',
+        'en': 'About Me'
+    },
+    'nav-games': {
+        'zh': '独立游戏',
+        'en': 'Games'
+    },
+    'nav-doujin': {
+        'zh': '我的同人',
+        'en': 'Fan Works'
+    },
+    'nav-oc': {
+        'zh': '我的OC',
+        'en': 'Original OC'
+    },
+    'nav-comics': {
+        'zh': '我的漫画',
+        'en': 'Comics'
+    },
+    'nav-only': {
+        'zh': '社团ONLY',
+        'en': 'Events'
+    },
+    'nav-shop': {
+        'zh': '进入小铺',
+        'en': 'Shop'
+    },
+    // 关于我
+    'about-title': {
+        'zh': '关于我',
+        'en': 'About Me'
+    },
+    'about-name': {
+        'zh': 'cucu',
+        'en': 'cucu'
+    },
+    'about-profession': {
+        'zh': '同人创作 | 独立画师 | 游戏开发 | ONLY | OC/IP设计',
+        'en': 'Fan Creation | Independent Artist | Game Developer | ONLY | OC/IP Design'
+    },
+    'about-bio-1': {
+        'zh': '嗨！我是cucu，一个热爱创作的六边形战士。什么都会自学一点，专业是与艺术无关的地理信息，现已毕业。热爱绘画、唱歌、写作、开发设计与同人创作，专注于打造充满想象力的多元世界。',
+        'en': 'Hi! I\'m cucu, a versatile creator passionate about all forms of art. I\'ve self-taught many skills and graduated with a degree in Geographic Information, which is unrelated to art. I love painting, singing, writing, game development, and fan creation, focusing on building imaginative and diverse worlds.'
+    },
+    'about-bio-2': {
+        'zh': '致力于将创意转化为可触摸交互的艺术作品，希望能给你带来快乐与灵感，嘿嘿！',
+        'en': 'I strive to transform my creative ideas into tangible interactive artworks, hoping to bring you joy and inspiration!'
+    },
+    'skill-illustration': {
+        'zh': '治愈插画',
+        'en': 'Healing Illustrations'
+    },
+    'skill-anime': {
+        'zh': '日系风格',
+        'en': 'Anime Style'
+    },
+    'skill-cute': {
+        'zh': '萌系设计',
+        'en': 'Cute Design'
+    },
+    'skill-games': {
+        'zh': '独立游戏',
+        'en': 'Indie Games'
+    },
+    'skill-vn': {
+        'zh': '视觉小说',
+        'en': 'Visual Novels'
+    },
+    'skill-short-comic': {
+        'zh': '短篇漫画',
+        'en': 'Short Comics'
+    },
+    'skill-fourkoma': {
+        'zh': '四格漫画',
+        'en': 'Four-panel Comics'
+    },
+    'skill-oc-person': {
+        'zh': 'OC人',
+        'en': 'OC Enthusiast'
+    },
+    'skill-creator': {
+        'zh': '创作星人',
+        'en': 'Creative Soul'
+    },
+    'skill-intp': {
+        'zh': 'intp',
+        'en': 'INTP'
+    },
+    'website-title': {
+        'zh': '关于这个网站',
+        'en': 'About This Website'
+    },
+    'website-fanworks': {
+        'zh': '我的同人',
+        'en': 'My Fan Works'
+    },
+    'website-fanworks-desc': {
+        'zh': '我们共同热爱的二次创作插画',
+        'en': 'Shared passion for fan-created illustrations'
+    },
+    'website-games': {
+        'zh': '我的游戏',
+        'en': 'My Games'
+    },
+    'website-games-desc': {
+        'zh': '我独立个人经营开发的游戏小项目',
+        'en': 'My independently developed small game projects'
+    },
+    'website-oc': {
+        'zh': '我的OC',
+        'en': 'My Original Characters'
+    },
+    'website-oc-desc': {
+        'zh': '我的原创角色设计与故事背景',
+        'en': 'My original character designs and story backgrounds'
+    },
+    'website-comics': {
+        'zh': '我的漫画',
+        'en': 'My Comics'
+    },
+    'website-comics-desc': {
+        'zh': '我绘制的一些短篇衍生漫画作品，既有原创也有二创；还有一些可能只是生活的分享~感谢您的阅览！',
+        'en': 'Some short derivative comic works I\'ve drawn, including both original and fan-created content; there may also be some life sharing~ Thank you for reading!'
+    },
+    'website-footer': {
+        'zh': '感谢您的来访！希望您能在这里得到快乐、灵感或是启发！~',
+        'en': 'Thank you for visiting! I hope you can find happiness, inspiration, or enlightenment here!'
+    },
+    // 页面标题
+    'section-games': {
+        'zh': '独立游戏',
+        'en': 'Independent Games'
+    },
+    'section-fanworks': {
+        'zh': '同人创作',
+        'en': 'Fan Works'
+    },
+    'section-oc': {
+        'zh': '原创OC/IP',
+        'en': 'Original OC/IP'
+    },
+    'section-only': {
+        'zh': 'ONLY举办',
+        'en': 'Events'
+    },
+    'section-comics': {
+        'zh': '原创漫画',
+        'en': 'Original Comics'
+    },
+    // 页脚
+    'footer-about': {
+        'zh': '商务联系',
+        'en': 'Business Contact'
+    },
+    'footer-works': {
+        'zh': '社交媒体',
+        'en': 'Social Media'
+    },
+    'footer-copyright': {
+        'zh': '&copy; 2025 cucu的创意工坊. 保留所有权利.',
+        'en': '&copy; 2025 cucu Creative Workshop. All rights reserved.'
+    }
+};
 
 // 初始化导航菜单
 function initNavigation() {
@@ -409,7 +628,7 @@ function loadSampleData() {
         // {
         //     id: 6,
         //     name: '磊星月',
-        //     bio: '资历颇深的异世界旅行者，拥有强大的精神力量，与脆弱不安的生命，却为了陪伴最重要的人孤注一掷地守护。',
+        //     bio: '资历颇深的异世界旅行者，拥有强大的精神力量，与脆弱不安的生命，却为了陪伴最重要的一个人孤注一掷地守护。',
         //     image: 'https://via.placeholder.com/400x400/8BC34A/2E7D32?text=Angela',
         //     details: {
         //         '年龄': '？？？',
