@@ -102,6 +102,10 @@ function translatePage(language) {
 // 翻译字典
 const translations = {
     // 导航栏
+    'website-logo': {
+        'zh': 'cucu的创意工坊',
+        'en': "cucu's Creative Workshop"
+    },
     'nav-about': {
         'zh': '关于我',
         'en': 'About Me'
